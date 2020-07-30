@@ -6,17 +6,22 @@ import (
 	"os"
 )
 
+func hasE(envVar string) bool {
+	_, ok := os.LookupEnv(envVar)
+	return ok
+}
+
 // TitleString returns a string that can be used for setting the title
 // for the currently running terminal emulator, or an error if not supported.
 func TitleString(title string) (string, error) {
 	var formatString string
-	if len(os.Getenv("KONSOLE_VERSION")) > 0 { // konsole?
+	if hasE("KONSOLE_VERSION") { // konsole?
 		formatString = "\033]30;%s\007"
-	} else if len(os.Getenv("GNOME_TERMINAL_SERVICE")) > 0 { // gnome-terminal?
+	} else if hasE("GNOME_TERINAL_SERVICE") { // gnome-terminal?
 		formatString = "\033]0;%s\a"
 	}
 	if len(formatString) == 0 {
-		return "", errors.New("found no supporter terminal emulator")
+		return "", errors.New("found no supported terminal emulator")
 	}
 	return fmt.Sprintf(formatString, title), nil
 }
