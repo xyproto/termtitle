@@ -6,7 +6,7 @@ Currently only supports `konsole` and `gnome-terminal`.
 
 Example use:
 
-~~~
+~~~go
 package main
 
 import (
