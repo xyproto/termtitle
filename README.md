@@ -2,7 +2,7 @@
 
 Change the title if the currently running terminal emulator supports it.
 
-Currently only supports `konsole` and `gnome-terminal`.
+Currently only supports `konsole` and `gnome-terminal`. The `MustSet` function will try the same terminal codes as for `gnome-terminal`, though, which may also be supported by other terminal emulators.
 
 Example use:
 
