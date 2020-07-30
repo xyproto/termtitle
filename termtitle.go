@@ -17,7 +17,7 @@ func TitleString(title string) (string, error) {
 	var formatString string
 	if hasE("KONSOLE_VERSION") { // konsole?
 		formatString = "\033]30;%s\007"
-	} else if hasE("GNOME_TERINAL_SERVICE") { // gnome-terminal?
+	} else if hasE("GNOME_TERMINAL_SERVICE") { // gnome-terminal?
 		formatString = "\033]0;%s\a"
 	}
 	if len(formatString) == 0 {
