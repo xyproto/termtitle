@@ -6,6 +6,7 @@ import (
 	"os"
 )
 
+// hasE checks if the given environment variable name is set
 func hasE(envVar string) bool {
 	_, ok := os.LookupEnv(envVar)
 	return ok
@@ -28,11 +29,11 @@ func TitleString(title string) (string, error) {
 
 // SetTitle tries to set the title of the currently running terminal emulator.
 // An error is returned if no supported terminal emulator is found.
-func SetTitle(title string) error {
+func Set(title string) error {
 	s, err := TitleString(title)
 	if err != nil {
 		return err
 	}
-	fmt.Println(s)
+	fmt.Print(s)
 	return nil
 }
