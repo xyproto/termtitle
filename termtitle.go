@@ -10,9 +10,9 @@ import (
 // for the currently running terminal emulator, or an error if not supported.
 func TitleString(title string) (string, error) {
 	var formatString string
-	if len(os.Getenv("KONSOLE_VERSION")) == 0 { // konsole?
+	if len(os.Getenv("KONSOLE_VERSION")) > 0 { // konsole?
 		formatString = "\033]30;%s\007"
-	} else if len(os.Getenv("GNOME_TERMINAL_SERVICE")) == 0 { // gnome-terminal?
+	} else if len(os.Getenv("GNOME_TERMINAL_SERVICE")) > 0 { // gnome-terminal?
 		formatString = "\033]0;%s\a"
 	}
 	if len(formatString) == 0 {
