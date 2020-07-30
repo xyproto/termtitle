@@ -13,5 +13,5 @@ func main() {
 		panic(err)
 	}
 	fmt.Printf("%q\n", s)
-	termtitle.SetTitle(title)
+	termtitle.Set(title)
 }
