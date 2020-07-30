@@ -17,3 +17,8 @@ func main() {
     termtitle.Set("TESTING 1 2 3")
 }
 ~~~
+
+## General info
+
+* Version: 1.1.0
+* License: MIT
