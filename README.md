@@ -18,6 +18,18 @@ func main() {
 }
 ~~~
 
+## Terminal codes
+
+For `konsole` a working string seems to be:
+
+    \033]0;TITLE\a
+
+While for `gnome-terminal`, this one works:
+
+    \033]30;TITLE\007
+
+`TITLE` is the title to be set.
+
 ## General info
 
 * Version: 1.1.0
