@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"os"
 
 	"github.com/xyproto/termtitle"
 )
@@ -10,8 +11,9 @@ func main() {
 	title := "TESTING 1 2 3"
 	s, err := termtitle.TitleString(title)
 	if err != nil {
-		panic(err)
+		fmt.Fprintln(os.Stderr, err)
+		os.Exit(1)
 	}
-	fmt.Printf("%q\n", s)
+	fmt.Printf("Printing: %q\n", s)
 	termtitle.Set(title)
 }

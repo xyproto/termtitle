@@ -2,9 +2,13 @@
 
 Change the title if the currently running terminal emulator supports it.
 
-Currently only supports `konsole` and `gnome-terminal`.
+## Currently supported terminal emulators
 
-Example use:
+* `konsole`
+* `alacritty`
+* `gnome-terminal`
+
+## Example use
 
 ~~~
 package main
@@ -20,5 +24,5 @@ func main() {
 
 ## General info
 
-* Version: 1.1.0
+* Version: 1.2.0
 * License: MIT
