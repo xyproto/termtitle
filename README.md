@@ -42,5 +42,5 @@ For `alacritty`, this seems to work:
 
 ## General info
 
-* Version: 1.4.0
+* Version: 1.5.0
 * License: MIT
