@@ -40,7 +40,16 @@ For `alacritty`, this seems to work:
 
 `TITLE` is the title that will be set.
 
+## The settitle utility
+
+This utility can be used for setting the terminal title.
+
+Install with Go 1.18 or later:
+
+    go install github.com/xyproto/termtitle/cmd/settitle@latest
+
 ## General info
 
 * Version: 1.5.1
 * License: BSD-3
+* Author: Alexander F. Rødseth &lt;xyproto@archlinux.org&gt;
